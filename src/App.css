@@ -1,0 +1,8 @@
+@import 'animate.css';
+
+.row {
+  height: 100vh;
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: #02023E;
+}

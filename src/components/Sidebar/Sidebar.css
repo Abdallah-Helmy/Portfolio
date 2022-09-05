@@ -1,0 +1,197 @@
+:root {
+    --primary-color: #08C7D6;
+    --bg-color: #02023E;
+    --main-transition: .3s ease;
+}
+
+.navbar {
+    height: 100%;
+    background: linear-gradient(to bottom, #02023E, #07aeba);
+    width: 70px;
+    z-index: 999999999;
+}
+
+.navbar .logo {
+    width: 50px;
+    border-radius: 8px;
+}
+
+.navbar-expand .navbar-nav a li {
+    position: relative;
+    margin-bottom: 15px;
+    transition: color var(--main-transition);
+}
+
+.navbar-expand .navbar-nav a li svg {
+    color: var(--bg-color);
+    font-size: 23px;
+    transition: color var(--main-transition);
+}
+
+.nav1 a.active li svg {
+    color: var(--primary-color);
+}
+
+
+.nav1 a:first-child li::after {
+    content: "Home";
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: -8px;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity var(--main-transition);
+} 
+
+.nav1 a:nth-child(2) li::after {
+    content: "About";
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: -50%;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity var(--main-transition);
+} 
+
+.nav1 a:nth-child(3) li::after {
+    content: "Projects";
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: -84%;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity var(--main-transition);
+} 
+
+.nav1 a:last-child li::after {
+    content: "Contact";
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: -75%;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity var(--main-transition);
+} 
+
+.nav1 li:hover svg {
+    opacity: 0;
+}
+
+.nav1 li:first-child:hover::after {
+    opacity: 1;
+} 
+
+
+
+/* Menu-Bar And Toggler */
+.menu-bar {
+    position: relative;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-bar span {
+    background-color: var(--bg-color);
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0px;
+    transition: all .3s ease;
+}
+
+.menu-bar span:first-child {
+    top: 0px;
+}
+
+.menu-bar span:nth-child(2) {
+    top: 8px;
+}
+
+.menu-bar span:last-child {
+    top: 16px;
+}
+
+.toggle-menu span:first-child {
+    top: 8px;
+    transform: rotate(45deg);
+}
+
+.toggle-menu span:nth-child(2) {
+    display: none;
+}
+
+.toggle-menu span:last-child {
+    top: 8px;
+    transform: rotate(-45deg);
+}
+
+.hidden-menu {
+    position: relative;
+    transform: translateX(-1600px);
+    background: linear-gradient(to top, #02023E, #08C7D6);
+    position: absolute;
+    bottom: -54px;
+    left: 0;
+    width: 100% !important;
+    transition: all var(--main-transition);
+    display: none;
+}
+
+.hidden-menu::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 82%;
+    background-color: var(--bg-color);
+    width: 1px;
+}
+
+.hidden-menu .togller-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+    
+.show {
+    transform: translateX(0px);
+    padding: 0px 0px 10px 0;
+}
+
+
+/* Start Media Queries*/
+@media (max-width: 768px) {
+    .menu-bar,
+    .hidden-menu {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+    }
+}
+
+@media (max-width: 991.99px) {
+    .navbar {
+        width: 100%;
+        height: 70px !important;
+    }
+
+    .navbar-expand .navbar-nav li {
+        margin: 0px 10px !important;
+    }
+}

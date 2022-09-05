@@ -1,0 +1,237 @@
+:root {
+    --primary-color: #08C7D6;
+    --bg-color: #02023E;
+    --main-transition: .3s ease;
+}
+
+.about-me h1 {
+    color: var(--primary-color);
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 1.3;
+    text-transform: capitalize;
+}
+
+.about-me .header {
+    position: relative;
+    font-size: 50px;
+    width: fit-content;
+    margin-bottom: 50px;
+}
+
+.about-me .header::after {
+   content: "";
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 3px;
+   background-color: var(--primary-color);
+}
+
+.about-skills {
+    margin-left: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.cubespinner {
+    animation-name: spincube;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 12s;
+    transform-style: preserve-3d;
+    transform-origin: 100px 100px 0;
+    margin-left: calc(50% - 100px);
+}
+
+.cubespinner div {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid var(--primary-color); 
+    background: linear-gradient(to left, #02023E, #08C7D6);
+    text-align: center;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px 0px var(--primary-color);
+  }
+
+.cubespinner .face1 {
+    transform: translateZ(100px);
+    color: #dd0031;
+}
+.cubespinner .face2 {
+    transform: rotateY(90deg) translateZ(100px);
+    color: #f06529;
+}
+.cubespinner .face3 {
+    transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+    color: #28a4d9;
+}
+.cubespinner .face4 {
+    transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+    color: #5ed4f4;
+}
+.cubespinner .face5 {
+    transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+    color: #efd81d;
+}
+.cubespinner .face6 {
+    transform: rotateX(-90deg) translateZ(100px);
+    color: #ec4d28;
+}
+
+@keyframes spincube {
+    from, 
+    to {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    16% {
+        transform: rotateY(-90deg);
+    }
+    33% {
+        transform: rotateY(-90deg) rotateZ(90deg);
+    }
+    50% {
+        transform: rotateY(-180deg) rotateZ(90deg);
+    }
+    66% {
+        transform: rotateY(-270deg) rotateZ(90deg);
+    }
+    83% {
+        transform: rotateX(90deg);
+    }  
+}
+
+
+
+/* Start Media Queries */
+@media (max-width: 386.99999px) {
+    .about-me {
+        height: 87%;
+        align-items: flex-start !important;
+        justify-content: center;
+    }
+
+    .about-me .header {
+        font-size: 35px;
+    }
+
+    .about-me h1 {
+        font-size: 18px;
+    }
+
+    .about-skills {
+        align-items: flex-end !important;
+        width: 100% !important;
+        margin-bottom: 30px !important;
+        height: 85% !important;
+    }
+}
+@media (min-width: 387px) and (max-width: 544.99px) {
+    .about-me {
+        height: 75%;
+        align-items: flex-start !important;
+        justify-content: center;
+    }
+
+    .about-me .header {
+        font-size: 35px;
+    }
+
+    .about-me h1 {
+        font-size: 18px;
+    }
+
+    .about-skills {
+        align-items: flex-end !important;
+        width: 100% !important;
+        margin-bottom: 30px !important;
+        height: 85% !important;
+    }
+}
+@media (min-width: 545px) and (max-width: 767.99px) {
+    .about-me {
+        height: 75%;
+        align-items: flex-start !important;
+        justify-content: center;
+    }
+
+    .about-me .header {
+        font-size: 40px;
+    }
+
+    .about-me h1 {
+        font-size: 22px;
+    }
+
+    .about-skills {
+        align-items: flex-end !important;
+        width: 100% !important;
+        margin-bottom: 30px !important;
+        height: 85% !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .about-me {
+        height: 75%;
+    }
+
+    .about-me .header {
+        font-size: 37px;
+    }
+
+    .about-me h1 {
+        font-size: 22px;
+    }
+}
+/* End Media Queries */
+
+
+
+/* Animated Letters*/
+.about-me .text #one span:first-child {
+    animation: fadeIn 1s .1s backwards;
+}
+
+.about-me .text #one span:nth-child(2) {
+    animation: fadeIn 1s .2s backwards;
+}
+
+.about-me .text #one span:nth-child(3) {
+    animation: fadeIn 1s .3s backwards;
+}
+
+.about-me .text #one span:nth-child(4) {
+    animation: fadeIn 1s .4s backwards;
+}
+
+.about-me .text #one span:nth-child(5) {
+    animation: fadeIn 1s .5s backwards;
+}
+
+.about-me .text #one::after {
+    animation: fadeIn 1s .58s backwards;
+}
+
+.text1 {
+    animation: fadeIn 1s .6s backwards;
+}
+
+.text2 {
+    animation: fadeIn 1s .7s backwards;
+}
+
+.text3 {
+    animation: fadeIn 1s .8s backwards;
+}
+
+
+.animated-show {
+    animation: fadeIn 1s 1s backwards;
+}

@@ -1,0 +1,46 @@
+:root {
+    --primary-color: rgb(8, 199, 214);
+    --bg-color: #02023E;
+    --main-transition: .3s ease;
+}
+
+.error {
+    color: var(--primary-color);
+}
+
+.error .error-details h1 {
+    text-transform: capitalize;
+    font-size: 50px;
+    animation: fadeIn 1s .2s backwards;
+    margin-bottom: 20px;
+}
+
+.error .error-details .homeback-btn {
+    text-align: center;
+}
+
+.error .error-details .homeback-btn button {
+    text-transform: capitalize;
+    animation: fadeIn 1s .3s backwards;
+    letter-spacing: 3px;
+}
+
+/* Start Media Queries */
+@media (max-width: 300px) {
+    .error .error-details h1 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 453px) {
+    .error .error-details h1 {
+        font-size: 35px;
+    }
+}
+@media (max-width: 992px) {
+    .error {
+        width: 100%;
+        align-items: flex-start !important;
+    }
+}
+/* End Media Queries */

@@ -1,0 +1,167 @@
+:root {
+    --primary-color: #08C7D6;
+    --bg-color: #02023E;
+    --main-transition: .3s ease;
+}
+
+.contact .contact-text {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.contact .contact-text span:first-child {
+    animation: fadeIn 1s .2s backwards;
+}
+
+.contact .contact-text span:nth-child(2) {
+    animation: fadeIn 1s .25s backwards;
+}
+
+.contact .contact-text span:nth-child(3) {
+    animation: fadeIn 1s .3s backwards;
+}
+
+.contact .contact-text span:nth-child(4) {
+    animation: fadeIn 1s .35s backwards;
+}
+
+.contact .contact-text span:nth-child(5) {
+    animation: fadeIn 1s .4s backwards;
+}
+
+.contact .contact-text span:nth-child(6) {
+    animation: fadeIn 1s .45s backwards;
+}
+
+.contact .contact-text span:nth-child(7) {
+    animation: fadeIn 1s .5s backwards;
+}
+
+.contact .contact-text span:nth-child(8) {
+    animation: fadeIn 1s .55s backwards;
+}
+
+.contact .contact-text span:nth-child(9) {
+    animation: fadeIn 1s .6s backwards;
+}
+
+.contact .contact-text span:nth-child(10) {
+    animation: fadeIn 1s .65s backwards;
+}
+
+.contact .contact-text span:last-child {
+    animation: fadeIn 1s .7s backwards;
+}
+
+.contact .contact-form form li input,
+.contact .contact-form form textarea {
+    padding: 10px 10px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #115173;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: all var(--main-transition);
+    border-radius: 2px;
+    animation: fadeIn 1s .75s backwards;
+}
+
+.contact .contact-form .info li {
+    width: 49.5%;
+}
+
+.contact .contact-form .info li input {
+    width: 100%;
+}
+
+.contact .contact-form .info li:first-child {
+    margin-right: 1%;
+}
+
+.contact .contact-form form button {
+    animation: fadeIn 1s .8s backwards;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+}
+
+.contact .contact-form form li {
+    position: relative;
+}
+
+.contact .contact-form form li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: var(--primary-color);  
+    transition: width var(--main-transition);
+}
+
+.contact .contact-form form li:focus-within:after {
+    width: 100%;
+    
+}
+
+.contact .contact-form form li input::placeholder,
+.contact .contact-form form li textarea::placeholder {
+    color: var(--bg-color);
+    transition: opacity var(--main-transition);
+}
+
+.contact .contact-form form li:focus-within input::placeholder,
+.contact .contact-form form li:focus-within textarea::placeholder {
+    opacity: 0;
+}
+
+.contact .msg-send {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    text-transform: capitalize;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    overflow: hidden;
+    border-radius: 5px;
+    transform: translateX(450px);
+    transition: transform var(--main-transition);
+    width: auto;
+}
+
+.showMsg {
+    transform: translateX(0px) !important;
+}
+
+.contact .contact-form form textarea {
+    max-height: 400px;
+}
+
+/* Start Media Queries  */
+@media (max-width: 575.999px) {
+    .contact {
+        width: 100%;
+        margin: 0px !important;
+    }
+
+    .contact .contact-form .info {
+        flex-direction: column;
+    }
+
+    .contact .contact-form .info li {
+        width: 100%;
+    }
+    .contact .contact-form .info li:first-child {
+        margin-bottom: 15px;
+    }
+
+    .contact .contact-form form textarea {
+        max-height: 300px;
+    }
+}
+/* End Media Queries  */

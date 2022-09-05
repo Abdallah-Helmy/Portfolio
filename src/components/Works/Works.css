@@ -1,0 +1,186 @@
+:root {
+    --primary-color: rgb(8, 199, 214);
+    --bg-color: #02023E;
+    --main-transition: .3s ease;
+}
+
+.works {
+    background-color: #02023E;
+    height: 100vh;
+    width: calc(100% - 70px);
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, minmax(290px, 1fr));
+    gap: 15px;
+    overflow: auto;
+    animation: fadeIn 1s .2s backwards;
+}
+
+.works .card {
+    position: relative;
+    width: 430px;
+    height: 75%;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.works .card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    background-color: rgba(218, 218, 218, 0.08);
+    backdrop-filter: blur(8px);
+    transition: height var(--main-transition);
+}
+
+.works .card:hover::after {
+    height: 100%;
+}
+
+.works .card:hover .demo {
+    top: 50%;
+}
+
+.works .card:hover img {
+    transform: scale(1.3);
+}
+
+.works .card img {
+    width: 100%;
+    height: 100%;
+    transition: transform var(--main-transition);
+}
+
+.card .demo {
+    position: absolute;
+    z-index: 5;
+    top: -20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: capitalize;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: top var(--main-transition);
+}
+
+.card .demo button {
+    font-size: 15px;
+    animation: fadeIn 1s 0s backwards;
+}
+
+.card .demo svg {
+    font-size: 25px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #02023E;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to top, #02023E, #07aeba);
+    border-radius: 2px 2px 8px;
+}
+
+.pop-up {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    text-transform: capitalize;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    overflow: hidden;
+    border-radius: 5px;
+    transform: translateX(450px);
+    transition: transform var(--main-transition);
+}
+
+.show {
+    transform: translateX(0px);
+}
+
+
+/* Start Media Queries */
+@media (max-width: 575.9999px) {
+    .works {
+        width: 100%;
+        height: fit-content;
+        grid-template-columns: 1fr;
+        overflow: auto;
+        margin-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .works .card {
+        width: 90%;
+        height: 100%;
+        margin: 15px auto;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.99px) {
+    .works {
+        width: 100%;
+        height: fit-content;
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+        overflow: auto;
+        margin-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .works .card {
+        width: 90%;
+        height: 100%;
+        margin: 15px auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.999px) {
+    .works {
+        width: 100%;
+        height: fit-content;
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+        overflow: auto;
+        margin-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .works .card {
+        width: 360px;
+        height: 100%;
+        margin: 15px auto;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.999999px) {
+    .works {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+        overflow: auto;
+    }
+
+    .works .card {
+        width: 400px;
+        height: 100%;
+        margin: 15px auto;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .works .card {
+        width: 360px;
+    }
+}
+/* End Media Queries */

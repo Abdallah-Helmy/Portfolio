@@ -1,0 +1,44 @@
+:root {
+    --primary-color: rgb(8, 199, 214);
+    --bg-color: #02023E;
+    --main-transition: .3s ease;
+}
+
+.loader .load {
+    position: relative;
+    width: 400px;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+}
+
+.loader .load::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: var(--primary-color);
+    transition: width var(--main-transition);
+    animation: preloader .5s .1s backwards ease;
+}
+
+@keyframes preloader {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+
+/* Start Media Queries  */
+@media (max-width: 992px) {
+    .loader {
+        align-items: flex-start !important;
+        width: 100% !important;
+    }
+}
+/* End Media Queries  */
+

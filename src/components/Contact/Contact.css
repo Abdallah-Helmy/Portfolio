@@ -132,6 +132,7 @@
     transform: translateX(450px);
     transition: transform var(--main-transition);
     width: auto;
+    z-index: 50;
 }
 
 .showMsg {

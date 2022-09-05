@@ -22,6 +22,7 @@
     font-weight: bold;
     overflow: hidden;
     border-radius: 5px;
+    z-index: 50;
     transform: translateX(450px);
     transition: transform var(--main-transition);
     width: auto;

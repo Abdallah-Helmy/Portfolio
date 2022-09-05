@@ -127,9 +127,9 @@
 
     .about-skills {
         align-items: flex-end !important;
-        width: 100% !important;
+        width: 88% !important;
         margin-bottom: 30px !important;
-        height: 85% !important;
+        height: 93% !important;
     }
 }
 @media (min-width: 387px) and (max-width: 544.99px) {

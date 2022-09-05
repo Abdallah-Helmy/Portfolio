@@ -147,6 +147,9 @@
     .contact {
         width: 100%;
         margin: 0px !important;
+        align-items: flex-start !important;
+        background-color: #02023E;
+        overflow: auto;
     }
 
     .contact .contact-form .info {
